@@ -14,4 +14,5 @@ function showMenu() {
     isMenuOpen = true;
   }
   menuElement.classList.toggle("menu_active");
+  header.style.backgroundColor = "rgba(242, 229, 213, 0.75)";
 }
