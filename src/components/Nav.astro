@@ -1,1 +1,61 @@
 ---
+import logoDark from "../assets/icons/logo_dark.png";
+import { Image, Picture } from "@astrojs/image/components";
+import "../stylesheets/global.css";
+---
+
+<script src="../scripts/menu.js"></script>
+<nav>
+  <Image src={logoDark} alt="logo" width={163} height={56} format={"svg"} />
+  <button>MENU</button>
+</nav>
+<div class="menu">
+  <a href="">SMYKKER</a>
+  <a href="">OM jOUXli</a>
+  <a href="">KONTAKT</a>
+</div>
+
+<style>
+  button {
+    border: none;
+    background-color: inherit;
+    font-size: 50px;
+    font-family: "Heebo", sans-serif;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  nav {
+    display: flex;
+    height: 130px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .menu a {
+    font-size: 70px;
+    font-family: "Habibi", serif;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    padding-right: 500px;
+    position: absolute;
+    align-items: end;
+    background: rgba(242, 229, 213, 0.75);
+  }
+
+  .menu_active {
+    display: flex;
+  }
+</style>

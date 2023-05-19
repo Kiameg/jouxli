@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Habibi&family=Heebo:wght@300&display=swap");
+/*   font-family: 'Habibi', serif;
+    font-family: 'Heebo', sans-serif;*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #f1e9df;
+  --h1-color: #3f352c;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+#wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}

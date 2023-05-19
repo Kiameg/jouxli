@@ -1,0 +1,35 @@
+---
+import "../stylesheets/global.css";
+import { Image, Picture } from "@astrojs/image/components";
+import iconFace from "../assets/icons/facebook-square-mono.png";
+import iconInsta from "../assets/icons/instagram-mono.png";
+---
+
+<footer>
+  <div class="footer1">
+    <p>ADRESSE</p>
+    <p>Jægersborg Allé 1G</p>
+    <p>2920 Charlottenlund</p>
+  </div>
+  <div class="footer_icons">
+    <Image src={iconFace} alt="logo" width={51} height={53} format={"svg"} />
+    <Image src={iconInsta} alt="logo" width={51} height={53} format={"svg"} />
+  </div>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .footer1 {
+    font-family: "Heebo", sans-serif;
+    font-size: 25px;
+  }
+  .footer_icons {
+    display: flex;
+    align-items: flex-end;
+  }
+</style>
