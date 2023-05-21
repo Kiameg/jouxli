@@ -1,12 +1,12 @@
 ---
-import logoDark from "../assets/icons/logo_dark.png";
+import logoLight from "../assets/icons/logo_lys.svg";
 import { Image, Picture } from "@astrojs/image/components";
 import "../stylesheets/global.css";
 ---
 
 <script src="../scripts/menu.js"></script>
 <nav>
-  <Image class="logo" src={logoDark} alt="logo" width={163} height={56} format={"svg"} />
+  <Image class="logo" src={logoLight} alt="logo" width={163} height={56} format={"svg"} />
   <button>MENU</button>
 </nav>
 <div class="menu">
@@ -19,6 +19,7 @@ import "../stylesheets/global.css";
   button {
     border: none;
     background-color: inherit;
+    color: #f2e5d5;
     font-size: 50px;
     font-family: "Heebo", sans-serif;
   }

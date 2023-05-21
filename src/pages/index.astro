@@ -1,7 +1,10 @@
 ---
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import { Image, Picture } from "@astrojs/image/components";
 import "../stylesheets/global.css";
+import video from "../assets/video/banner_vid.mp4";
+import heroIndex from "../assets/icons/jouxli_index.svg";
 ---
 
 <script src="../scripts/menu.js"></script>
@@ -20,8 +23,26 @@ import "../stylesheets/global.css";
       <Nav />
     </header>
     <main>
-      <div id="wrapper"></div>
+      <div id="wrapper">
+        <Image src={heroIndex} alt="jouxli banner text" format={"svg"} width={910} height={328} />
+      </div>
+      <video autoplay muted loop preload="auto">
+        <source src={video} type="video/mp4" />
+      </video>
     </main>
     <Footer />
   </body>
 </html>
+<style>
+  video {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+  }
+  img {
+    margin: 10em 0 12em 0;
+  }
+</style>
