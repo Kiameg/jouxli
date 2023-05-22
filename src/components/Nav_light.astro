@@ -6,7 +6,7 @@ import "../stylesheets/global.css";
 
 <script src="../scripts/menu.js"></script>
 <nav>
-  <Image class="logo" src={logoLight} alt="logo" width={125} format={"svg"} />
+  <Image class="logo" src={logoLight} alt="logo" format={"svg"} id="logo"/>
   <button>MENU</button>
 </nav>
 <div class="menu">
@@ -15,13 +15,18 @@ import "../stylesheets/global.css";
   <a href="">KONTAKT</a>
 </div>
 
+
 <style>
+
+
   button {
     border: none;
     background-color: inherit;
     color: #f2e5d5;
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     font-family: "Heebo", sans-serif;
+    margin-right: 20px;
+    margin-top: 20px;
   }
 
   img {
@@ -29,12 +34,20 @@ import "../stylesheets/global.css";
     height: auto;
   }
 
+
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1000px;
     margin: 0 auto;
+    
+
+  }
+  
+  #logo {
+    margin-left: 20px;
+    margin-top: 20px;
   }
 
   .menu a {
@@ -58,4 +71,7 @@ import "../stylesheets/global.css";
   .menu_active {
     display: flex;
   }
+
+
+
 </style>
