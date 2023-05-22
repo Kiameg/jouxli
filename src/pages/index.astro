@@ -24,7 +24,7 @@ import heroIndex from "../assets/icons/jouxli_index.svg";
     </header>
     <main>
       <div id="banner">
-        <Image src={heroIndex} alt="jouxli banner text" format={"svg"} class="banner_img"/>
+        <Image src={heroIndex} alt="jouxli banner text" format={"svg"} class="banner_img" />
       </div>
       <video autoplay muted loop preload="auto">
         <source src={video} type="video/mp4" />
@@ -34,11 +34,9 @@ import heroIndex from "../assets/icons/jouxli_index.svg";
   </body>
 </html>
 
-
 <style>
-
- body {
-  display: flex;
+  body {
+    display: flex;
     flex-direction: column;
     background-image: url(/src/assets/img/dem.jpg);
     background-size: cover;
@@ -46,47 +44,37 @@ import heroIndex from "../assets/icons/jouxli_index.svg";
     background-attachment: fixed;
     background-position: center;
     overflow: hidden;
-    height: 95vh;
+    height: 100dvh;
     justify-content: space-between;
- }
-
-
-  .banner_img {
-  width: 100%;
-  margin-top: 25%;
-  margin-left: 20px;
-  padding-right: 40px;
-}
-
-video {
-  display: none;
-}
-
-@media (min-width: 1000px) {
-
-  .banner_img {
-  width: 100%;
-  margin-top: 2%;
-}
-
-
-body {
-  margin-inline: auto;
- }
-
-
- video {
-    display: block;
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    z-index: -1;
   }
 
+  .banner_img {
+    width: 100%;
+    padding: 0 1em;
+  }
 
-}
+  video {
+    display: none;
+  }
 
+  @media (min-width: 1000px) {
+    .banner_img {
+      width: 100%;
+      margin-top: 2%;
+    }
 
+    body {
+      margin-inline: auto;
+    }
+
+    video {
+      display: block;
+      position: absolute;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
 </style>
