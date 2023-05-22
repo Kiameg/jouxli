@@ -12,8 +12,8 @@ import iconInsta from "../assets/icons/instagram-light.svg";
     <p>2920 Charlottenlund</p>
   </div>
   <div class="footer_icons">
-    <Image src={iconFace} alt="logo" width={51} height={53} format={"svg"} />
-    <Image src={iconInsta} alt="logo" width={51} height={53} format={"svg"} />
+    <Image src={iconFace} alt="logo" width={50} format={"svg"} class="facebook_icon"/>
+    <Image src={iconInsta} alt="logo" width={50} format={"svg"} />
   </div>
 </footer>
 
@@ -22,15 +22,24 @@ import iconInsta from "../assets/icons/instagram-light.svg";
     display: flex;
     justify-content: space-between;
     max-width: 1000px;
-    margin: 0 auto;
+    width: 100%;
+    margin-inline: auto;
+
   }
+
   .footer1 {
     font-family: "Heebo", sans-serif;
     font-size: 25px;
     color: #f2e5d5;
   }
+
   .footer_icons {
     display: flex;
     align-items: flex-end;
   }
+
+  .facebook_icon {
+    margin-right: 10px;
+  }
+
 </style>
