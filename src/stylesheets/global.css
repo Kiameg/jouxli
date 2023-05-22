@@ -16,7 +16,4 @@ body {
   background-color: var(--main-bg-color);
 }
 
-#wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
-}
+

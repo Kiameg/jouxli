@@ -23,7 +23,7 @@ import heroIndex from "../assets/icons/jouxli_index.svg";
       <Nav_light />
     </header>
     <main>
-      <div id="wrapper">
+      <div id="banner">
         <Image src={heroIndex} alt="jouxli banner text" format={"svg"} width={910} height={328} />
       </div>
       <video autoplay muted loop preload="auto">
@@ -33,6 +33,8 @@ import heroIndex from "../assets/icons/jouxli_index.svg";
     <Footer_light />
   </body>
 </html>
+
+
 <style>
   video {
     position: absolute;
@@ -42,7 +44,13 @@ import heroIndex from "../assets/icons/jouxli_index.svg";
     object-fit: cover;
     z-index: -1;
   }
+
   img {
     margin: 10em 0 11em 0;
   }
+
+  #banner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 </style>
