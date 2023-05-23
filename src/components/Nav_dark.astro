@@ -4,23 +4,23 @@ import { Image, Picture } from "@astrojs/image/components";
 import "../stylesheets/global.css";
 ---
 
-<script src="../scripts/menu.js"></script>
+<script src="../scripts/menu2.js"></script>
 <nav>
-  <Image class="logo" src={logoDark} alt="logo" width={163} height={56} format={"svg"} />
+  <a href="/"><Image class="logo" src={logoDark} alt="logo" format={"svg"} /></a>
   <button>MENU</button>
 </nav>
 <div class="menu">
-  <a href="">SMYKKER</a>
-  <a href="">OM jOUXli</a>
-  <a href="">KONTAKT</a>
+  <a href="/galleri/">SMYKKER</a>
+  <a href="/om/">OM jOUXli</a>
+  <a href="/kontakt/">KONTAKT</a>
 </div>
 
 <style>
   button {
     border: none;
     background-color: inherit;
-    color: #f2e5d5;
-    font-size: 50px;
+    color: #3f352c;
+    font-size: 2.1rem;
     font-family: "Heebo", sans-serif;
   }
 
@@ -28,14 +28,18 @@ import "../stylesheets/global.css";
     max-width: 100%;
     height: auto;
   }
-
+  .logo--hide {
+    display: none;
+  }
   nav {
     display: flex;
     height: 130px;
     justify-content: space-between;
+    padding: 0 1em;
     align-items: center;
     max-width: 1000px;
     margin: 0 auto;
+    z-index: 1;
   }
 
   .menu a {
@@ -43,6 +47,7 @@ import "../stylesheets/global.css";
     font-family: "Habibi", serif;
     text-decoration: none;
     color: inherit;
+    padding: 10px 0;
   }
 
   .menu {
@@ -50,7 +55,8 @@ import "../stylesheets/global.css";
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    padding-right: 500px;
+    padding-top: 100px;
+    padding-right: 550px;
     position: absolute;
     align-items: end;
     background: rgba(242, 229, 213, 0.75);
@@ -58,5 +64,18 @@ import "../stylesheets/global.css";
 
   .menu_active {
     display: flex;
+  }
+
+  @media (max-width: 450px) {
+    .menu a {
+      font-size: 50px;
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+    }
+    .menu {
+      padding-top: 6rem;
+      padding-right: 0;
+    }
   }
 </style>
