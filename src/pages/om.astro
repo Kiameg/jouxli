@@ -1,0 +1,81 @@
+---
+import Nav_dark from "../components/Nav_dark.astro";
+import Footer_dark from "../components/Footer_dark.astro";
+import { Image, Picture } from "@astrojs/image/components";
+import Underskrift from "../assets/icons/underskrift 1.svg";
+import backgroundOne from "../assets/icons/Smykke1.svg";
+import backgroundTwo from "../assets/icons/Perler.svg";
+import "../stylesheets/global.css";
+---
+
+<script src="../scripts/menu2.js"></script>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+
+  <body>
+    <header>
+      <Nav_dark />
+    </header>
+    <main>
+      <h1 class="om_h1">OM jOUXli</h1>
+      <div id="wrapper">
+        <section class="p_om">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero possimus, itaque praesentium odit corrupti beatae fuga animi! Nam ex velit consectetur saepe fugit, provident a cumque est praesentium doloribus veniam!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero possimus, itaque praesentium odit corrupti beatae fuga animi! Nam ex velit consectetur saepe fugit, provident a cumque est praesentium doloribus veniam!</p>
+        </section>
+        <section class="underskrift_section">
+          <Image src={Underskrift} alt="portrait" format={"svg"} class="underskrift" />
+        </section>
+        <section class="backgrounds">
+          <Image src={backgroundOne} width={217} height={287} alt="background" format={"svg"} class="backgroundOne" />
+          <Image src={backgroundTwo} alt="background" format={"svg"} class="backgroundTwo" />
+        </section>
+      </div>
+    </main>
+    <Footer_dark />
+  </body>
+</html>
+<style>
+  .om_h1 {
+    color: #3f352c;
+    font-size: 56px;
+    font-family: "Habibi", serif;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  #wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  p {
+    font-family: "Heebo", sans-serif;
+  }
+
+  .underskrift_section {
+    padding-top: 2em;
+  }
+
+  .backgroundOne {
+    position: absolute;
+    top: 15em;
+    right: 0;
+    z-index: -1;
+  }
+
+  .backgroundTwo {
+    position: absolute;
+    -webkit-transform: rotate(20deg);
+    bottom: 10em;
+    z-index: -1;
+    left: -10;
+  }
+</style>

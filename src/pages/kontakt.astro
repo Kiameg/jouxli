@@ -5,6 +5,7 @@ import { Image, Picture } from "@astrojs/image/components";
 import lisePortrait from "../assets/img/portrait.jpg";
 import backgroundOne from "../assets/icons/Smykke1.svg";
 import backgroundTwo from "../assets/icons/Perler.svg";
+import backgroundThree from "../assets/icons/Perler2.svg";
 import "../stylesheets/global.css";
 ---
 
@@ -39,6 +40,7 @@ import "../stylesheets/global.css";
         </section>
         <Image src={backgroundOne} width={392} height={517} alt="background" format={"svg"} class="backgroundOne" />
         <Image src={backgroundTwo} width={} height={190} alt="background" format={"svg"} class="backgroundTwo" />
+        <Image src={backgroundThree} alt="background" format={"svg"} class="backgroundThree" />
         <section class="portrait">
           <Image src={lisePortrait} alt="portrait" format={"webp"} class="lisePortrait" />
         </section>
@@ -75,6 +77,10 @@ import "../stylesheets/global.css";
     z-index: -1;
     left: 0;
   }
+  .backgroundThree {
+    display: none;
+  }
+
   .lisePortrait {
     width: 100%;
     height: auto;
@@ -87,6 +93,7 @@ import "../stylesheets/global.css";
   .portrait {
     padding-top: 4rem;
     padding-bottom: 4rem;
+    z-index: -3;
   }
 
   h3,
@@ -114,9 +121,20 @@ import "../stylesheets/global.css";
 
     .backgroundTwo {
       position: absolute;
-      bottom: -14em;
+      bottom: -10em;
       z-index: -1;
+      left: initial;
       right: 0;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+
+    .backgroundThree {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -1em;
+      z-index: -1;
     }
 
     .lisePortrait {
