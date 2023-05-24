@@ -4,7 +4,8 @@ import Footer_dark from "../components/Footer_dark.astro";
 import { Image, Picture } from "@astrojs/image/components";
 import lisePortrait from "../assets/img/portrait.jpg";
 import backgroundOne from "../assets/icons/Smykke1.svg";
-import backgroundTwo from "../assets/icons/Perler.svg";
+import backgroundTwodesk from "../assets/icons/Perler.png";
+import backgroundTwomobile from "../assets/icons/Perler_kopi.png";
 import backgroundThree from "../assets/icons/Perler2.svg";
 import "../stylesheets/global.css";
 ---
@@ -39,7 +40,8 @@ import "../stylesheets/global.css";
           <p>MAIL: jouxli.dk@gmail.com</p>
         </section>
         <Image src={backgroundOne} width={392} height={517} alt="background" format={"svg"} class="backgroundOne" />
-        <Image src={backgroundTwo} width={} height={190} alt="background" format={"svg"} class="backgroundTwo" />
+        <Image src={backgroundTwodesk} width={} height={190} alt="background" format={"svg"} class="backgroundTwodesk" />
+        <Image src={backgroundTwomobile} width={} height={190} alt="background" format={"svg"} class="backgroundTwomobile" />
         <Image src={backgroundThree} alt="background" format={"svg"} class="backgroundThree" />
         <section class="portrait">
           <Image src={lisePortrait} alt="portrait" format={"webp"} class="lisePortrait" />
@@ -71,13 +73,17 @@ import "../stylesheets/global.css";
     z-index: -1;
   }
 
-  .backgroundTwo {
+  .backgroundTwomobile {
     position: absolute;
     bottom: -14em;
     z-index: -1;
     left: 0;
   }
   .backgroundThree {
+    display: none;
+  }
+
+  .backgroundTwodesk {
     display: none;
   }
 
@@ -119,21 +125,23 @@ import "../stylesheets/global.css";
       display: none;
     }
 
-    .backgroundTwo {
+    .backgroundTwomobile {
+      display: none;
+    }
+    .backgroundTwodesk {
+      display: block;
       position: absolute;
-      bottom: -10em;
+      right: 12%;
+      transform: scale(2);
+      bottom: 0;
       z-index: -1;
-      left: initial;
-      right: 0;
-      -webkit-transform: scaleX(-1);
-      transform: scaleX(-1);
     }
 
     .backgroundThree {
       display: block;
       position: absolute;
       left: 0;
-      top: -1em;
+      top: 0;
       z-index: -1;
     }
 
