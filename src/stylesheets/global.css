@@ -10,10 +10,21 @@
 :root {
   --main-bg-color: #f1e9df;
   --h1-color: #3f352c;
+  --p-color: #0000;
 }
 
+html {
+  --h1_mobile: 56px;
+  --h2_mobile: 50px;
+  --h3_mobile: 0.1rem;
+  --p_mobile: 0.1rem;
+
+  --h1_desktop: 130px;
+}
+
+h1 {
+  font-weight: lighter;
+}
 body {
   background-color: var(--main-bg-color);
 }
-
-
