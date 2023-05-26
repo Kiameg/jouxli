@@ -26,10 +26,10 @@ import "../stylesheets/global.css";
       <Nav_dark />
     </header>
     <main>
-      <h1 class="om_h1">jOUXli</h1>
+      <h1>jOUXli</h1>
       <div id="wrapper">
         <section class="p_om">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero possimus, itaque praesentium odit corrupti beatae fuga animi! Nam ex velit consectetur saepe fugit, provident a cumque est praesentium doloribus veniam!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero possimus, itaque praesentium odit corrupti beatae fuga animi! Nam ex velit consectetur saepe fugit, provident a cumque est praesentium doloribus veniam!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero possimus, itaque praesentium odit corrupti beatae fuga animi! Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         </section>
         <section class="underskrift_section">
           <Image src={Underskrift} alt="portrait" format={"svg"} class="underskrift" />
@@ -51,29 +51,17 @@ import "../stylesheets/global.css";
 </html>
 
 <style>
-  .om_h1 {
-    color: #3f352c;
-    font-size: 56px;
-    font-family: "Habibi", serif;
-    text-align: center;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-  }
-
   #wrapper {
     max-width: 300px;
     margin: 0 auto;
   }
 
-  p {
-    font-family: "Heebo", sans-serif;
-  }
 
   .underskrift_section {
     display: flex;
     justify-content: center;
     padding-top: 2em;
-    padding-bottom: 2em;
+    padding-bottom: 3em;
   }
 
   .backgroundOne {
@@ -128,12 +116,16 @@ import "../stylesheets/global.css";
       max-width: 80%;
     }
     .underskrift_section {
-      padding-top: 5em;
+      padding-top: 2em;
       padding-bottom: 5em;
     }
 
-    .om_h1 {
-      font-size: 130px;
+    h1 {
+      font-size: var(--h1_desktop)
+    }
+
+    p {
+      font-size: var(--p_desktop);
     }
 
     .vid_section {

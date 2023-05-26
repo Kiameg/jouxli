@@ -14,17 +14,47 @@
 }
 
 html {
-  --h1_mobile: 56px;
-  --h2_mobile: 50px;
-  --h3_mobile: 0.1rem;
-  --p_mobile: 0.1rem;
+  --h1_mobile: 4.5rem;
+  --h2_mobile: 3rem;
+  --h3_mobile: 1.8rem;
+  --p_mobile: 1.4rem;
 
-  --h1_desktop: 130px;
+  --h1_desktop: 8.2rem;
+  --h2_desktop: 6rem;
+  --h3_desktop: 3.6rem;
+  --p_desktop: 2rem;
 }
 
 h1 {
+  color: #3f352c;
+  font-size: var(--h1_mobile);
+  font-family: "Habibi", serif;
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
   font-weight: lighter;
 }
+
+h3 {
+  color: #3f352c;
+  font-size: var(--h3_mobile);
+  font-family: "Heebo";
+  font-weight: lighter;
+}
+
+h2 {
+  color: #3f352c;
+  font-size: var(--h2_mobile);
+  font-family: "Habibi", serif;
+  font-weight: lighter;
+}
+
+p {
+  font-family: "Heebo", sans-serif;
+  color: black;
+  font-size: var(--p_mobile);
+}
+
 body {
   background-color: var(--main-bg-color);
 }
