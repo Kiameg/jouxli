@@ -1,35 +1,21 @@
 ---
-import Nav_dark from "../components/Nav_dark.astro";
-import Footer_dark from "../components/Footer_dark.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 import { Image, Picture } from "@astrojs/image/components";
 import Underskrift from "../assets/icons/underskrift 1.svg";
-import videoInterview from "../assets/video/Jouxli_interview.mp4";
-import backgroundOne from "../assets/icons/Smykke1_om_desk.svg";
-import backgroundTwo from "../assets/icons/Perler_om.svg";
+import videoInterview from "../assets/video/jouxli_interview.mp4";
+import backgroundOne from "../assets/icons/smykke1_om_desk.svg";
+import backgroundTwo from "../assets/icons/perler_om.svg";
 import backgroundTwodesk from "../assets/icons/necklace_om_desk.svg";
 import "../stylesheets/global.css";
 ---
 
 <script src="../scripts/menu2.js"></script>
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-
-  <body>
-    <header>
-      <Nav_dark />
-    </header>
-    <main>
+<MainLayout>
       <h1>jOUXli</h1>
       <div id="wrapper">
         <section class="p_om">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero possimus, itaque praesentium odit corrupti beatae fuga animi! Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero possimus, itaque praesentium odit corrupti beatae fuga animi! Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         </section>
         <section class="underskrift_section">
           <Image src={Underskrift} alt="portrait" format={"svg"} class="underskrift" />
@@ -45,10 +31,7 @@ import "../stylesheets/global.css";
           </video>
         </section>
       </div>
-    </main>
-    <Footer_dark />
-  </body>
-</html>
+    </MainLayout>
 
 <style>
   #wrapper {

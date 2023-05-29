@@ -1,0 +1,27 @@
+---
+import Nav_dark from "../components/Nav_dark.astro";
+import Footer_dark from "../components/Footer_dark.astro";
+import "../stylesheets/global.css";
+---
+
+<script src="../scripts/menu2.js"></script>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>jOUXli</title>
+  </head>
+
+  <body>
+    <header>
+      <Nav_dark />
+    </header>
+    <main>
+        <slot/>
+    </main>
+    <Footer_dark />
+  </body>
+</html>

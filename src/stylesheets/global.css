@@ -8,18 +8,18 @@
 }
 
 html {
-  --h1_mobile: 4.5rem;
-  --h2_mobile: 3rem;
+  --h1_mobile: 4rem;
+  --h2_mobile: 1.8rem;
   --h3_mobile: 1.8rem;
   --p_mobile: 1.4rem;
 
   --h1_desktop: 8.2rem;
-  --h2_desktop: 6rem;
-  --h3_desktop: 3.6rem;
-  --p_desktop: 2rem;
+  --h2_desktop: 3.6rem;
+  --h3_desktop: 2.5rem;
+  --p_desktop: 1.6rem;
 
   --beige: #f1e9df;
-  --darkbrown: #3f352c;
+  --darkbrown: #3F352C;
   --black: #000000;
   --lightbrown: #806350;
   --grey: #B4A69D;
