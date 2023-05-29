@@ -24,7 +24,7 @@ import heroIndex from "../assets/icons/jouxli_index.svg";
     </header>
     <main>
       <div id="banner">
-        <Image src={heroIndex} alt="jouxli banner text" format={"svg"} class="banner_img" />
+        <Image src={heroIndex} alt="jouxli banner text" format={"svg"} class="banner_img banneranimation1" />
       </div>
       <video autoplay muted loop preload="auto">
         <source src={video} type="video/mp4" />
@@ -76,5 +76,42 @@ import heroIndex from "../assets/icons/jouxli_index.svg";
       object-fit: cover;
       z-index: -1;
     }
+
+    .banneranimation1 {
+    animation-name: banneranimation1_kf;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  
+@keyframes banneranimation1_kf{
+    0%{
+      opacity: 0;
+    }
+
+    25%{
+      opacity: 0.25;
+    }
+
+    50%{
+      opacity: 0.6;
+    }
+
+    75%{
+      opacity: 0.75;
+    }
+
+    100%{
+      opacity: 1;
+    }
+
+
+  
+  }
+
+
+
+
   }
 </style>

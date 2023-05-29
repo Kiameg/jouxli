@@ -8,7 +8,7 @@ const { link, name, galleryphoto, price } = Astro.props;
         <div class="hover_text">
             <h2>{name}</h2>
             <h3>{price}</h3>
-            <p id="readmore" class="hover-underline-animation">Læs mere</p>
+            <p id="readmore">Læs mere</p>
         </div>
 </a>
 
@@ -38,8 +38,34 @@ const { link, name, galleryphoto, price } = Astro.props;
         color: var(--beige);
     }
 
+
     #readmore {
-        padding-top: 10px;
+        padding-top: 20px;
+        display: inline;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #readmore:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        width: 0;
+        bottom: 0px;
+        background: var(--beige);
+        height: 2px;
+        transition-property: width;
+        transition-timing-function: ease-out;
+    }
+
+    #readmore:hover:after,
+    #readmore:focus:after,
+    #readmore:active:after {
+        left: 0;
+        right: auto;
+        width: 100%;
+        transition-duration: 0.4s;
     }
 
     @media (min-width: 1000px) {
@@ -93,11 +119,7 @@ const { link, name, galleryphoto, price } = Astro.props;
     #readmore {
         color: var(--beige);
         font-size: var(--p_mobile);
-        text-decoration: none;
-    }
 
-    #readmore:hover {
-        text-decoration: underline;
     }
 
 

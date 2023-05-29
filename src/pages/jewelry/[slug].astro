@@ -24,12 +24,10 @@ return data.map((jewelry) => ({
 } 
 
 
-
 ---
 
-<script src="../../scripts/singleview.js"></script>
 
-<MainLayout>
+<MainLayout withBackground>
     <h1>{jewelry.name}</h1>
     <section class="back">
         <button onclick="history.back()" class="back_button">Tilbage</button>
@@ -38,8 +36,8 @@ return data.map((jewelry) => ({
         <div>
             <img src={"../../public/product_img/" + `${jewelry.photo1}`} alt=`${jewelry.name}` class="img_big">
             <div>
-                <img src={"../../public/product_img/" + `${jewelry.photo1}`} alt=`${jewelry.name}` class="img_small1">
-                <img src={"../../public/product_img/" + `${jewelry.photo2}`} alt=`${jewelry.name}` class="img_small2 fade">
+                <img src={"../../public/product_img/" + `${jewelry.photo1}`} alt=`${jewelry.name}` class="img_small1 mini-photo">
+                <img src={"../../public/product_img/" + `${jewelry.photo2}`} alt=`${jewelry.name}` class="img_small2 fade mini-photo">
             </div>
         </div>
         <div>
@@ -48,10 +46,12 @@ return data.map((jewelry) => ({
             <button class="contact_button"><a href="/kontakt/">Kontakt</a></button>
         </div>
     </section>
-    <Background></Background>
 </MainLayout>
 
+<script src="../../scripts/singleview.js"></script>
 <style>
+
+    
     .fade {
         opacity: 0.4;
     }

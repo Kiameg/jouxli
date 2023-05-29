@@ -2,6 +2,8 @@
 import Nav_dark from "../components/Nav_dark.astro";
 import Footer_dark from "../components/Footer_dark.astro";
 import "../stylesheets/global.css";
+import Background from "../components/Background.astro";
+const {withBackground} = Astro.props;
 ---
 
 <script src="../scripts/menu2.js"></script>
@@ -22,6 +24,7 @@ import "../stylesheets/global.css";
     <main>
         <slot/>
     </main>
+    { withBackground && <Background />}
     <Footer_dark />
   </body>
 </html>
