@@ -1,4 +1,74 @@
 ---
 import "../stylesheets/global.css";
+import { Image, Picture } from "@astrojs/image/components";
+import lisePortrait from "../assets/img/portrait.jpg";
+import backgroundOne from "../assets/icons/smykke1.svg";
+import backgroundTwodesk from "../assets/icons/perler.png";
+import backgroundTwomobile from "../assets/icons/perler_kopi.png";
+import backgroundThree from "../assets/icons/perler2.svg";
 ---
 
+<Image src={backgroundOne} width={392} height={517} alt="background" format={"svg"} class="backgroundOne" />
+<Image src={backgroundTwodesk} width={} height={190} alt="background" format={"svg"} class="backgroundTwodesk" />
+<Image src={backgroundTwomobile} width={} height={190} alt="background" format={"svg"} class="backgroundTwomobile" />
+<Image src={backgroundThree} alt="background" format={"svg"} class="backgroundThree" />
+
+<style>
+ #wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .backgroundOne {
+    position: absolute;
+    top: 0;
+    right: -1;
+    z-index: -1;
+  }
+
+  .backgroundTwomobile {
+    position: absolute;
+    bottom: -20em;
+    z-index: -1;
+    left: 0;
+  }
+  .backgroundThree {
+    display: none;
+  }
+
+  .backgroundTwodesk {
+    display: none;
+  }
+@media (min-width: 1000px) {
+    #wrapper {
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      align-items: center;
+      gap: 5em;
+    }
+
+    .backgroundOne {
+      display: none;
+    }
+
+    .backgroundTwomobile {
+      display: none;
+    }
+ .backgroundTwodesk {
+      display: block;
+      position: absolute;
+      right: 12%;
+      transform: scale(2);
+      bottom: -12em;
+      z-index: -1;
+    }
+
+    .backgroundThree {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+  </style>
