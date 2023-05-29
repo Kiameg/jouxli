@@ -8,7 +8,7 @@ const { link, name, galleryphoto, price } = Astro.props;
         <div class="hover_text">
             <h2>{name}</h2>
             <h3>{price}</h3>
-            <p id="readmore">Læs mere</p>
+            <p id="readmore" class="hover-underline-animation">Læs mere</p>
         </div>
 </a>
 
@@ -73,6 +73,7 @@ const { link, name, galleryphoto, price } = Astro.props;
         color: var(--beige);
     }
 
+
     a:hover .hover_text{
         visibility: visible;
         transition: .5s ease;
@@ -83,7 +84,6 @@ const { link, name, galleryphoto, price } = Astro.props;
         transition: .5s ease;
     }
 
-
     img {
         grid-row: 1/2;
         grid-column: 1/2;
@@ -93,7 +93,13 @@ const { link, name, galleryphoto, price } = Astro.props;
     #readmore {
         color: var(--beige);
         font-size: var(--p_mobile);
+        text-decoration: none;
     }
+
+    #readmore:hover {
+        text-decoration: underline;
+    }
+
 
     }
 </style>
