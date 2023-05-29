@@ -5,33 +5,33 @@ import Underskrift from "../assets/icons/underskrift 1.svg";
 import videoInterview from "../assets/video/jouxli_interview.mp4";
 import backgroundOne from "../assets/icons/smykke1_om_desk.svg";
 import backgroundTwo from "../assets/icons/perler_om.svg";
-import backgroundTwodesk from "../assets/icons/necklace_om_desk.svg";
+import backgroundTwodesk from "../assets/icons/halssmykke-modsat2.png";
 import "../stylesheets/global.css";
 ---
 
 <script src="../scripts/menu2.js"></script>
 
 <MainLayout>
-      <h1>jOUXli</h1>
-      <div id="wrapper">
-        <section class="p_om">
-          <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero possimus, itaque praesentium odit corrupti beatae fuga animi! Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        </section>
-        <section class="underskrift_section">
-          <Image src={Underskrift} alt="portrait" format={"svg"} class="underskrift" />
-        </section>
-        <section class="backgrounds">
-          <Image src={backgroundOne} width={217} height={287} alt="background" format={"svg"} class="backgroundOne" />
-          <Image src={backgroundTwo} alt="background" format={"svg"} class="backgroundTwo" />
-          <Image src={backgroundTwodesk} alt="background" format={"svg"} class="backgroundTwodesk" />
-        </section>
-        <section class="vid_section">
-          <video controls>
-            <source src={videoInterview} type="video/mp4" />
-          </video>
-        </section>
-      </div>
-    </MainLayout>
+  <h1>jOUXli</h1>
+  <div id="wrapper">
+    <section class="p_om">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero possimus, itaque praesentium odit corrupti beatae fuga animi! Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    </section>
+    <section class="underskrift_section">
+      <Image src={Underskrift} alt="portrait" format={"svg"} class="underskrift" />
+    </section>
+    <section class="backgrounds">
+      <Image src={backgroundOne} width={217} height={287} alt="background" format={"svg"} class="backgroundOne" />
+      <Image src={backgroundTwo} alt="background" format={"svg"} class="backgroundTwo" />
+      <Image src={backgroundTwodesk} alt="background" format={"svg"} class="backgroundTwodesk" />
+    </section>
+    <section class="vid_section">
+      <video controls>
+        <source src={videoInterview} type="video/mp4" />
+      </video>
+    </section>
+  </div>
+</MainLayout>
 
 <style>
   #wrapper {
@@ -40,7 +40,6 @@ import "../stylesheets/global.css";
     margin: 0 auto;
   }
 
-
   .underskrift_section {
     display: flex;
     justify-content: center;
@@ -48,16 +47,20 @@ import "../stylesheets/global.css";
     padding-bottom: 3em;
   }
 
+  p {
+    padding-left: 1em;
+  }
+
   .backgroundOne {
     position: absolute;
-    top: 15em;
-    right: 0;
+    top: 12em;
+    right: -2em;
     z-index: -1;
   }
 
   .backgroundTwo {
     position: absolute;
-    width: 70%;
+    transform: scale(1);
     height: auto;
     bottom: -5em;
     z-index: -1;
@@ -70,6 +73,7 @@ import "../stylesheets/global.css";
 
   video {
     max-width: 100%;
+    margin-bottom: 1em;
   }
 
   @media (min-width: 1000px) {
@@ -82,17 +86,18 @@ import "../stylesheets/global.css";
     }
     .backgroundOne {
       top: 10em;
-      transform: scale(2);
+      transform: scale(1.7);
       right: 5em;
     }
     .backgroundTwodesk {
       position: absolute;
       display: block;
-      width: 45%;
+      width: 57%;
       height: auto;
-      bottom: -28em;
+      bottom: -30em;
       z-index: -1;
-      left: 0;
+      left: -12em;
+      transform: rotate(-5deg);
     }
     video {
       padding-bottom: 5em;
@@ -101,10 +106,11 @@ import "../stylesheets/global.css";
     .underskrift_section {
       padding-top: 2em;
       padding-bottom: 5em;
+      transform: scale(1.3);
     }
 
     h1 {
-      font-size: var(--h1_desktop)
+      font-size: var(--h1_desktop);
     }
 
     p {
