@@ -1,15 +1,17 @@
 ---
 import Jewelry from "./Jewelry.astro";
 const {indhold} = Astro.props;
-
+const content = Array.isArray(indhold)
+    ? indhold
+    : [indhold]
 ---
 
 <div>
     {
-        indhold.map((jewelry) => (
+        content.map((jewelry) => (
             <Jewelry
             link={"/jewelry/" + jewelry.slug}
-            name={jewelry.eventtitel}
+            name={jewelry.name}
             price={jewelry.price}
             galleryphoto={`/product_img/${jewelry.galleryphoto}`}
             photo1={`/product_img/${jewelry.photo1}`}

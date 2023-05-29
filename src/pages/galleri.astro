@@ -17,10 +17,10 @@ const options = {
 const response = await fetch(url, options);
 const data = await response.json();
 
-const TallPhoto = data.filter((jewelry) => jewelry.typephoto == "3");
-const FlatPhoto = data.filter((jewelry) => jewelry.typephoto == "2");
-const SquarePhoto = data.filter((jewelry) => jewelry.typephoto == "1");
-
+const randomPhotos = data.sort((a, b) => 0.5 - Math.random())
+const TallPhotos = randomPhotos.filter((jewelry) => jewelry.typephoto == "3");
+const FlatPhotos = randomPhotos.filter((jewelry) => jewelry.typephoto == "2");
+const SquarePhotos = randomPhotos.filter((jewelry) => jewelry.typephoto == "1");
 ---
 
 <script src="../scripts/menu.js"></script>
@@ -30,34 +30,66 @@ const SquarePhoto = data.filter((jewelry) => jewelry.typephoto == "1");
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro ea sunt sapiente maxime a aliquid earum, facere beatae cumque.</p>
     <section class="listview_grid">
         <div class="listview_grid_boxbig1_1 box1">
-            <Shelf typephoto={SquarePhoto}/>
+            <Shelf indhold={SquarePhotos.shift()}/>
         </div>
         <div class="listview_grid_box2_1 box2">
-            <Shelf  typephoto={TallPhoto}>
+            <Shelf  indhold={FlatPhotos.shift()}>
         </div>
         <div class="listview_grid_boxsmall1_2 box3">
-            <Shelf typephoto={SquarePhoto}>
+            <Shelf indhold={TallPhotos.shift()}>
         </div>
         <div class="listview_grid_boxsmall1_1 box4">
-            <Shelf>
+            <Shelf indhold={SquarePhotos.shift()}>
         </div>
         <div class="listview_grid_boxsmall1_1 box5">
-            <Shelf>
+            <Shelf indhold={SquarePhotos.shift()}>
         </div>
         <div class="listview_grid_boxsmall1_1 box6">
-            <Shelf>
+            <Shelf indhold={SquarePhotos.shift()}>
         </div>
         <div class="listview_grid_boxsmall1_2_2nd box7">
-            <Shelf>
+            <Shelf indhold={TallPhotos.shift()}>
         </div>
         <div class="listview_grid_boxsmall1_1 box8">
-            <Shelf>
+            <Shelf indhold={SquarePhotos.shift()}>
         </div>
         <div class="listview_grid_box2_1 box9">
-            <Shelf>
+            <Shelf indhold={FlatPhotos.shift()}>
         </div>
         <div class="listview_grid_boxbig1_1 box10">
-            <Shelf>
+            <Shelf indhold={SquarePhotos.shift()}>
+        </div>
+
+
+        <div class="listview_grid_boxbig1_1 box1">
+            <Shelf indhold={SquarePhotos.shift()}/>
+        </div>
+        <div class="listview_grid_box2_1 box2">
+            <Shelf  indhold={FlatPhotos.shift()}>
+        </div>
+        <div class="listview_grid_boxsmall1_2 box3">
+            <Shelf indhold={TallPhotos.shift()}>
+        </div>
+        <div class="listview_grid_boxsmall1_1 box4">
+            <Shelf indhold={SquarePhotos.shift()}>
+        </div>
+        <div class="listview_grid_boxsmall1_1 box5">
+            <Shelf indhold={SquarePhotos.shift()}>
+        </div>
+        <div class="listview_grid_boxsmall1_1 box11">
+            <Shelf indhold={SquarePhotos.shift()}>
+        </div>
+        <div class="listview_grid_boxsmall1_2_2nd box12">
+            <Shelf indhold={TallPhotos.shift()}>
+        </div>
+        <div class="listview_grid_boxsmall1_1 box13">
+            <Shelf indhold={SquarePhotos.shift()}>
+        </div>
+        <div class="listview_grid_box2_1 box14">
+            <Shelf indhold={FlatPhotos.shift()}>
+        </div>
+        <div class="listview_grid_boxbig1_1 box15">
+            <Shelf indhold={SquarePhotos.shift()}>
         </div>
             
             
@@ -203,16 +235,41 @@ const SquarePhoto = data.filter((jewelry) => jewelry.typephoto == "1");
         grid-row: 4/6
     }
 
+    .box11 {
+        grid-column: 3/4;
+        grid-row: 6;
+    }
+
+    .box12 {
+        grid-column: 4/5;
+        grid-row: 6/8
+    }
+
+    .box13 {
+        grid-column: 3/4;
+        grid-row: 7;
+    }
+
+    .box14 {
+        grid-column: 3/5;
+        grid-row: 8;
+    }
+
+    .box15 {
+        grid-column: 3/5;
+        grid-row: 9/11
+    }
+
     a {
         z-index: 1;
     }
 
-    .box1, .box3, .box4, .box7, .box9 {
+    .box1, .box3, .box4, .box7, .box9, .box12, .box14 {
         background-color: var(--darkbrown);
         z-index: 1;
     }
 
-    .box2, .box5, .box6, .box8, .box10 {
+    .box2, .box5, .box6, .box8, .box10, .box11, .box13, .box15 {
         background-color: var(--lightbrown);
         z-index: 1;
     }
@@ -227,12 +284,12 @@ const SquarePhoto = data.filter((jewelry) => jewelry.typephoto == "1");
         color: var(--beige);
     }
 
-    .box1:hover .hover_text, .box2:hover .hover_text, .box3:hover .hover_text, .box4:hover .hover_text, .box5:hover .hover_text, .box6:hover .hover_text, .box7:hover .hover_text, .box8:hover .hover_text, .box9:hover .hover_text, .box10:hover .hover_text {
+    .box1:hover .hover_text, .box2:hover .hover_text, .box3:hover .hover_text, .box4:hover .hover_text, .box5:hover .hover_text, .box6:hover .hover_text, .box7:hover .hover_text, .box8:hover .hover_text, .box9:hover .hover_text, .box10:hover .hover_text, .box11:hover .hover_text, .box12:hover .hover_text, .box13:hover .hover_text, .box14:hover .hover_text, .box15:hover .hover_text {
         visibility: visible;
         transition: .5s ease;
     }
 
-    .box1:hover img, .box2:hover img, .box3:hover img, .box4:hover img, .box5:hover img, .box6:hover img, .box7:hover img, .box8:hover img, .box9:hover img, .box10:hover img {
+    .box1:hover img, .box2:hover img, .box3:hover img, .box4:hover img, .box5:hover img, .box6:hover img, .box7:hover img, .box8:hover img, .box9:hover img, .box10:hover img, .box11:hover img, .box12:hover img, .box13:hover img, .box14:hover img, .box15:hover img {
         opacity: 0.2;
         transition: .5s ease;
     }
