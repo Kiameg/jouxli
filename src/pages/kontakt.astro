@@ -3,12 +3,6 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Background from "../components/Background.astro";
 import { Image, Picture } from "@astrojs/image/components";
 import lisePortrait from "../assets/img/portrait.jpg";
-/*
-import backgroundOne from "../assets/icons/smykke1.svg";
-import backgroundTwodesk from "../assets/icons/perler.png";
-import backgroundTwomobile from "../assets/icons/perler_kopi.png";
-import backgroundThree from "../assets/icons/perler2.svg";
-*/
 import "../stylesheets/global.css";
 ---
 
@@ -40,26 +34,6 @@ import "../stylesheets/global.css";
     max-width: 300px;
     margin: 0 auto;
   }
-  .backgroundOne {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-  }
-
-  .backgroundTwomobile {
-    position: absolute;
-    bottom: -14em;
-    z-index: -1;
-    left: 0;
-  }
-  .backgroundThree {
-    display: none;
-  }
-
-  .backgroundTwodesk {
-    display: none;
-  }
 
   .lisePortrait {
     width: 100%;
@@ -87,33 +61,9 @@ import "../stylesheets/global.css";
       gap: 5em;
     }
 
-    .backgroundOne {
-      display: none;
-    }
-
-    .backgroundTwomobile {
-      display: none;
-    }
-
     .kontakt_section {
       order: 1;
       padding-left: 100px;
-    }
-    .backgroundTwodesk {
-      display: block;
-      position: absolute;
-      right: 12%;
-      transform: scale(2);
-      bottom: 0;
-      z-index: -1;
-    }
-
-    .backgroundThree {
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      z-index: -1;
     }
 
     .lisePortrait {
