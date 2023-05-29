@@ -2,7 +2,8 @@
 import "../stylesheets/global.css";
 import MainLayout from "../layouts/MainLayout.astro";
 import Shelf from "../components/Shelf.astro";
-import Jewelry from "../components/Jewelry.astro";
+import Background from "../components/Background.astro";
+
 
 const { title } = Astro.props;
 
@@ -94,6 +95,7 @@ const SquarePhotos = randomPhotos.filter((jewelry) => jewelry.typephoto == "1");
             
             
     </section>
+    <Background></Background>
 </MainLayout>
 
 <style>

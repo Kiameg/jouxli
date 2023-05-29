@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import "../../stylesheets/global.css";
+import Background from "../../components/Background.astro";
 const { jewelry } = Astro.props;
 
 export async function getStaticPaths() {
@@ -22,8 +23,11 @@ return data.map((jewelry) => ({
 
 } 
 
+
+
 ---
 
+<script src="../../scripts/singleview.js"></script>
 
 <MainLayout>
     <h1>{jewelry.name}</h1>
@@ -34,20 +38,30 @@ return data.map((jewelry) => ({
         <div>
             <img src={"../../public/product_img/" + `${jewelry.photo1}`} alt=`${jewelry.name}` class="img_big">
             <div>
-                <img src={"../../public/product_img/" + `${jewelry.photo1}`} alt=`${jewelry.name}` class="img_small">
-                <img src={"../../public/product_img/" + `${jewelry.photo2}`} alt=`${jewelry.name}` class="img_small">
+                <img src={"../../public/product_img/" + `${jewelry.photo1}`} alt=`${jewelry.name}` class="img_small1">
+                <img src={"../../public/product_img/" + `${jewelry.photo2}`} alt=`${jewelry.name}` class="img_small2 fade">
             </div>
         </div>
         <div>
             <p class="description">{jewelry.description}</p>
             <p class="price">Pris: {jewelry.price}</p>
-            <button class="contact_button">Kontakt</button>
+            <button class="contact_button"><a href="/kontakt/">Kontakt</a></button>
         </div>
     </section>
-
+    <Background></Background>
 </MainLayout>
 
 <style>
+    .fade {
+        opacity: 0.4;
+    }
+
+    .fade:hover {
+        opacity: 1;
+    }
+
+
+
     .back {
         max-width: 1000px;
         margin-inline: auto;
@@ -61,11 +75,19 @@ return data.map((jewelry) => ({
         border: none;
     }
 
+    
+
     .img_big {
         width: 100%;
     }
 
-    .img_small {
+    .img_small1 {
+        width: 20%;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+
+    .img_small2 {
         width: 20%;
         margin-top: 5px;
         margin-right: 5px;
@@ -87,17 +109,28 @@ return data.map((jewelry) => ({
     .contact_button {
         border: none;
         background-color: var(--lightbrown);
-        color: var(--beige);
         padding-left: 25px;
         padding-right: 25px;
         padding-top: 13px;
         padding-bottom: 13px;
         margin-top: 40px;
-        font-size: var(--p_mobile);
-        font-family: 'Heebo', sans-serif;
         border-radius: 5px;
         margin-bottom: 50px;
     }
+
+    .contact_button a {
+        color: var(--beige);
+        font-size: var(--p_mobile);
+        font-family: 'Heebo', sans-serif;
+        text-decoration: none;
+    }
+
+    .contact_button:hover {
+        text-decoration: underline;
+        color: var(--beige);
+    }
+
+
 
     @media (min-width: 1000px) {
         .back_button {
