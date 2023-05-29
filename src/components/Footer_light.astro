@@ -9,21 +9,22 @@ import iconFaceDark from "../assets/icons/facebook-dark.svg";
 
 <script src="../scripts/menu.js"></script>
 <footer>
-  <div class="footer1">
-    <h3>ADRESSE</h3>
-    <p>Jægersborg Allé 1G</p>
-    <p>2920 Charlottenlund</p>
-  </div>
+  <a href="https://goo.gl/maps/UGkkWZiHbx1mpEEaA?coh=178571&entry=tt">
+    <div class="footer1">
+      <h3>ADRESSE</h3>
+      <p>Jægersborg Allé 1G</p>
+      <p>2920 Charlottenlund</p>
+    </div>
+  </a>
   <div class="footer_icons">
-    <Image src={iconFace} alt="logo" width={50} format={"svg"} class="facebook_icon" />
-    <Image src={iconInsta} alt="logo" width={50} format={"svg"} class="instagram_icon" />
+    <a href="https://www.facebook.com/jouxli"><Image src={iconFace} alt="logo" width={50} format={"svg"} class="facebook_icon" /></a>
+    <a href="https://www.instagram.com/jouxli/"><Image src={iconInsta} alt="logo" width={50} format={"svg"} class="instagram_icon" /></a>
     <Image src={iconFaceDark} alt="logo" width={50} format={"svg"} class="facebook_icon facebook_icon--hide" />
     <Image src={iconInstaDark} alt="logo" width={50} format={"svg"} class="instagram_icon instagram_icon--hide" />
   </div>
 </footer>
 
 <style>
-
   h3 {
     font-size: 1.4rem;
     color: var(--white);
@@ -32,6 +33,9 @@ import iconFaceDark from "../assets/icons/facebook-dark.svg";
   p {
     font-size: 1rem;
     color: var(--white);
+  }
+  a {
+    text-decoration: none;
   }
 
   footer {
@@ -65,11 +69,11 @@ import iconFaceDark from "../assets/icons/facebook-dark.svg";
   }
 
   @media (min-width: 1000px) {
-    .footer_icons, .footer1 {
-    margin-right: 0px;
-    margin-left: 0px;
+    .footer_icons,
+    .footer1 {
+      margin-right: 0px;
+      margin-left: 0px;
     }
-
   }
 
   @media (max-width: 450px) {

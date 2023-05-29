@@ -6,14 +6,16 @@ import iconInsta from "../assets/icons/instagram-dark.svg";
 ---
 
 <footer>
-  <div class="footer1">
-    <h3>ADRESSE</h3>
-    <p>Jægersborg Allé 1G</p>
-    <p>2920 Charlottenlund</p>
-  </div>
+  <a href="https://goo.gl/maps/UGkkWZiHbx1mpEEaA?coh=178571&entry=tt">
+    <div class="footer1">
+      <h3>ADRESSE</h3>
+      <p>Jægersborg Allé 1G</p>
+      <p>2920 Charlottenlund</p>
+    </div>
+  </a>
   <div class="footer_icons">
-    <Image src={iconFace} alt="logo" width={51} height={53} format={"svg"} />
-    <Image src={iconInsta} alt="logo" width={51} height={53} format={"svg"} />
+    <a href="https://www.facebook.com/jouxli"><Image src={iconFace} alt="logo" width={51} height={53} format={"svg"} /></a>
+    <a href="https://www.instagram.com/jouxli/"><Image src={iconInsta} alt="logo" width={51} height={53} format={"svg"} /></a>
   </div>
 </footer>
 
@@ -25,6 +27,10 @@ import iconInsta from "../assets/icons/instagram-dark.svg";
 
   p {
     font-size: 1rem;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   footer {
@@ -57,11 +63,10 @@ import iconInsta from "../assets/icons/instagram-dark.svg";
   }
 
   @media (min-width: 1000px) {
-    .footer_icons, .footer1 {
-    margin-right: 0px;
-    margin-left: 0px;
+    .footer_icons,
+    .footer1 {
+      margin-right: 0px;
+      margin-left: 0px;
     }
-
   }
-  
 </style>
