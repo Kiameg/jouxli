@@ -8,6 +8,7 @@ const faceIcon = document.querySelector(".facebook_icon");
 const instaDark = document.querySelector(".instagram_icon--hide");
 const faceDark = document.querySelector(".facebook_icon--hide");
 const pElements = document.querySelectorAll(".footer1 p");
+const h3Element = document.querySelector(".footer1 h3");
 let isMenuOpen = false;
 
 menuButton.addEventListener("click", showMenu);
@@ -25,6 +26,7 @@ function showMenu() {
     pElements.forEach((p) => {
       p.style.color = "#f2e5d5";
     });
+    h3Element.style.color = "#f2e5d5";
     instaDark.style.display = "none";
     instaIcon.style.display = "block";
     faceDark.style.display = "none";
@@ -38,6 +40,7 @@ function showMenu() {
     pElements.forEach((p) => {
       p.style.color = "#3F352C";
     });
+    h3Element.style.color = "#3F352C";
     instaDark.style.display = "block";
     instaIcon.style.display = "none";
     faceDark.style.display = "block";
