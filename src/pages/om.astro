@@ -5,7 +5,7 @@ import Underskrift from "../assets/icons/underskrift.svg";
 import videoInterview from "../assets/video/jouxli_interview.mp4";
 import backgroundOne from "../assets/icons/smykke1_om_desk.svg";
 import backgroundTwo from "../assets/icons/perler_om.svg";
-import backgroundTwodesk from "../assets/icons/halssmykke-modsat2.png";
+import backgroundTwodesk from "../assets/icons/halssmykke-modsat.svg";
 import "../stylesheets/global.css";
 ---
 
@@ -63,12 +63,10 @@ import "../stylesheets/global.css";
 
   .backgroundTwo {
     position: absolute;
-    transform: scale(0.9);
-    height: auto;
     bottom: 0;
     z-index: -1;
-    left: -1.5em;
-    width: 100%;
+    left: 0;
+    max-width: 100%;
   }
 
   .backgroundTwodesk {
@@ -78,6 +76,10 @@ import "../stylesheets/global.css";
   video {
     max-width: 100%;
     margin-bottom: 1em;
+  }
+
+  .underskrift {
+    max-width: 80%;
   }
 
 
@@ -145,7 +147,7 @@ import "../stylesheets/global.css";
     .backgroundTwodesk {
       position: absolute;
       display: block;
-      width: 57%;
+      width: 45%;
       height: auto;
       bottom: 1em;
       z-index: -1;

@@ -2,8 +2,8 @@
 import "../stylesheets/global.css";
 import { Image, Picture } from "@astrojs/image/components";
 import backgroundOne from "../assets/icons/smykke1.svg";
-import backgroundTwodesk from "../assets/icons/perler.png";
-import backgroundTwomobile from "../assets/icons/perler_kopi.png";
+import backgroundTwodesk from "../assets/icons/perler.svg";
+import backgroundTwomobile from "../assets/icons/perler_mobile.svg";
 import backgroundThree from "../assets/icons/perler2.svg";
 ---
 
@@ -24,9 +24,9 @@ import backgroundThree from "../assets/icons/perler2.svg";
   .backgroundTwomobile {
     position: absolute;
     bottom: 0;
-    z-index: -2;
+    z-index: -1;
     left: 0;
-    width: 100%;
+    max-width: 100%;
   }
   .backgroundThree {
     display: none;
@@ -73,4 +73,6 @@ import backgroundThree from "../assets/icons/perler2.svg";
       top: 0;
       z-index: -2;
     }
+
+  }
   </style>
