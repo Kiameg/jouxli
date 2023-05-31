@@ -38,7 +38,7 @@ import heroIndex from "../assets/icons/jouxli_index.svg";
   body {
     display: flex;
     flex-direction: column;
-    background-image: url(/src/assets/img/dem.jpg);
+    background-image: url(/src/assets/img/dem.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -78,40 +78,33 @@ import heroIndex from "../assets/icons/jouxli_index.svg";
     }
 
     .banneranimation1 {
-    animation-name: banneranimation1_kf;
-    animation-duration: 2.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  }
-  
-@keyframes banneranimation1_kf{
-    0%{
-      opacity: 0;
+      animation-name: banneranimation1_kf;
+      animation-duration: 2.5s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
     }
 
-    25%{
-      opacity: 0.25;
+    @keyframes banneranimation1_kf {
+      0% {
+        opacity: 0;
+      }
+
+      25% {
+        opacity: 0.25;
+      }
+
+      50% {
+        opacity: 0.6;
+      }
+
+      75% {
+        opacity: 0.75;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
-
-    50%{
-      opacity: 0.6;
-    }
-
-    75%{
-      opacity: 0.75;
-    }
-
-    100%{
-      opacity: 1;
-    }
-
-
-  
-  }
-
-
-
-
   }
 </style>
