@@ -9,7 +9,7 @@ import iconFaceDark from "../assets/icons/facebook-dark.svg";
 
 <script src="../scripts/menu.js"></script>
 <footer>
-  <a href="https://goo.gl/maps/UGkkWZiHbx1mpEEaA?coh=178571&entry=tt">
+  <a href="https://goo.gl/maps/UGkkWZiHbx1mpEEaA?coh=178571&entry=tt" target=”_blank”>
     <div class="footer1">
       <h3>ADRESSE</h3>
       <p>Jægersborg Allé 1G</p>
@@ -17,8 +17,8 @@ import iconFaceDark from "../assets/icons/facebook-dark.svg";
     </div>
   </a>
   <div class="footer_icons">
-    <a href="https://www.facebook.com/jouxli"><Image src={iconFace} width={null} height={null} alt="logo" width={50} format={"svg"} class="facebook_icon" /></a>
-    <a href="https://www.instagram.com/jouxli/"><Image src={iconInsta} width={null} height={null} alt="logo" width={50} format={"svg"} class="instagram_icon" /></a>
+    <a href="https://www.facebook.com/jouxli" target=”_blank”><Image src={iconFace} width={null} height={null} alt="logo" width={50} format={"svg"} class="facebook_icon" /></a>
+    <a href="https://www.instagram.com/jouxli/" target=”_blank”><Image src={iconInsta} width={null} height={null} alt="logo" width={50} format={"svg"} class="instagram_icon" /></a>
     <Image src={iconFaceDark} alt="logo" width={50} height={null} format={"svg"} class="facebook_icon facebook_icon--hide" />
     <Image src={iconInstaDark} alt="logo" width={50} height={null} format={"svg"} class="instagram_icon instagram_icon--hide" />
   </div>
@@ -47,6 +47,7 @@ import iconFaceDark from "../assets/icons/facebook-dark.svg";
     z-index: 5;
     margin-bottom: 2.5em;
     margin-top: 2.5em;
+    position: relative;
   }
 
   .footer1 {
