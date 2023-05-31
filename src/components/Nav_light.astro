@@ -29,32 +29,32 @@ import "../stylesheets/global.css";
   }
 
   button {
-        display: inline;
-        position: relative;
-        overflow: hidden;
-    }
+    display: inline;
+    position: relative;
+    overflow: hidden;
+  }
 
-    button:after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        right: 0;
-        width: 0;
-        bottom: 0px;
-        background: var(--beige);
-        height: 2px;
-        transition-property: width;
-        transition-timing-function: ease-out;
-    }
+  button:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    width: 0;
+    bottom: 0px;
+    background: var(--beige);
+    height: 2px;
+    transition-property: width;
+    transition-timing-function: ease-out;
+  }
 
-    button:hover:after,
-    button:focus:after,
-    button:active:after {
-        left: 0;
-        right: auto;
-        width: 100%;
-        transition-duration: 0.4s;
-    }
+  button:hover:after,
+  button:focus:after,
+  button:active:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+    transition-duration: 0.4s;
+  }
 
   img {
     max-width: 100%;
@@ -88,39 +88,39 @@ import "../stylesheets/global.css";
     width: 100vw;
     position: absolute;
     align-items: end;
-    background: rgba(242,229,213,0.75);
+    background: rgba(242, 229, 213, 0.95);
     z-index: 4;
     top: 130px;
     bottom: 0;
   }
 
   li a {
-        display: inline;
-        position: relative;
-        overflow: hidden;
-    }
+    display: inline;
+    position: relative;
+    overflow: hidden;
+  }
 
-    li a:after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        right: 0;
-        width: 0;
-        bottom: 0px;
-        background: var(--darkbrown);
-        height: 2px;
-        transition-property: width;
-        transition-timing-function: ease-out;
-    }
+  li a:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    width: 0;
+    bottom: 0px;
+    background: var(--darkbrown);
+    height: 2px;
+    transition-property: width;
+    transition-timing-function: ease-out;
+  }
 
-    li a:hover:after,
-    li a:focus:after,
-    li a:active:after {
-        left: 0;
-        right: auto;
-        width: 100%;
-        transition-duration: 0.4s;
-    }
+  li a:hover:after,
+  li a:focus:after,
+  li a:active:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+    transition-duration: 0.4s;
+  }
 
   ul {
     list-style: none;
@@ -130,7 +130,7 @@ import "../stylesheets/global.css";
     padding-top: 8em;
   }
 
-    ul li {
+  ul li {
     padding-bottom: 25px;
   }
 
@@ -155,13 +155,13 @@ import "../stylesheets/global.css";
 
     nav {
       padding: 0 1em;
-  }
+    }
 
-  ul {
-    max-width: 1000px;
-    width: 100%;
-    text-align: center;
-    padding-top: 0em;
-  }
+    ul {
+      max-width: 1000px;
+      width: 100%;
+      text-align: center;
+      padding-top: 0em;
+    }
   }
 </style>

@@ -18,9 +18,9 @@ import "../stylesheets/global.css";
 </div>
 
 <style>
-body {
-  position: relative;
-}
+  body {
+    position: relative;
+  }
 
   button {
     border: none;
@@ -31,32 +31,32 @@ body {
   }
 
   button {
-        display: inline;
-        position: relative;
-        overflow: hidden;
-    }
+    display: inline;
+    position: relative;
+    overflow: hidden;
+  }
 
-    button:after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        right: 0;
-        width: 0;
-        bottom: 0px;
-        background: var(--darkbrown);
-        height: 2px;
-        transition-property: width;
-        transition-timing-function: ease-out;
-    }
+  button:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    width: 0;
+    bottom: 0px;
+    background: var(--darkbrown);
+    height: 2px;
+    transition-property: width;
+    transition-timing-function: ease-out;
+  }
 
-    button:hover:after,
-    button:focus:after,
-    button:active:after {
-        left: 0;
-        right: auto;
-        width: 100%;
-        transition-duration: 0.4s;
-    }
+  button:hover:after,
+  button:focus:after,
+  button:active:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+    transition-duration: 0.4s;
+  }
 
   img {
     max-width: 100%;
@@ -89,7 +89,7 @@ body {
     width: 100vw;
     position: absolute;
     align-items: end;
-    background: rgba(242,229,213,0.75);
+    background: rgba(242, 229, 213, 0.95);
     z-index: 4;
     top: 130px;
     bottom: 0;
@@ -108,32 +108,32 @@ body {
   }
 
   .menu a {
-        display: inline;
-        position: relative;
-        overflow: hidden;
-    }
+    display: inline;
+    position: relative;
+    overflow: hidden;
+  }
 
-    .menu a:after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        right: 0;
-        width: 0;
-        bottom: 0px;
-        background: var(--darkbrown);
-        height: 2px;
-        transition-property: width;
-        transition-timing-function: ease-out;
-    }
+  .menu a:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    width: 0;
+    bottom: 0px;
+    background: var(--darkbrown);
+    height: 2px;
+    transition-property: width;
+    transition-timing-function: ease-out;
+  }
 
-    .menu a:hover:after,
-    .menu a:focus:after,
-    .menu a:active:after {
-        left: 0;
-        right: auto;
-        width: 100%;
-        transition-duration: 0.4s;
-    }
+  .menu a:hover:after,
+  .menu a:focus:after,
+  .menu a:active:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+    transition-duration: 0.4s;
+  }
 
   .menu_active {
     display: flex;

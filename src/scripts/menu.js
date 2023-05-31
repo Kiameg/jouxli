@@ -45,7 +45,7 @@ function showMenu() {
     instaIcon.style.display = "none";
     faceDark.style.display = "block";
     faceIcon.style.display = "none";
-    header.style.backgroundColor = "rgba(242, 229, 213, 0.75)";
+    header.style.backgroundColor = "rgba(242, 229, 213, 0.95)";
   }
   menuElement.classList.toggle("menu_active");
 }

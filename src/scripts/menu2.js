@@ -15,7 +15,7 @@ function showMenu() {
   } else {
     menuButton.textContent = "LUK";
     isMenuOpen = true;
-    header.style.backgroundColor = "rgba(242, 229, 213, 0.75)";
+    header.style.backgroundColor = "rgba(242, 229, 213, 0.95)";
   }
   menuElement.classList.toggle("menu_active");
 }
