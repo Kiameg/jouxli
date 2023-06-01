@@ -25,7 +25,7 @@ import "../stylesheets/global.css";
       <Image src={backgroundTwodesk} width={null} height={null} alt="background" format={"svg"} class="backgroundTwodesk" />
     </section>
     <section class="vid_section">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/zY3_CjBMPNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/zY3_CjBMPNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </section>
   </div>
 </MainLayout>
@@ -133,6 +133,11 @@ import "../stylesheets/global.css";
   
   }
 
+  iframe {
+      width: 339px;
+      height: 190.7px;
+    }
+
 
 
   @media (min-width: 1000px) {
@@ -184,6 +189,11 @@ import "../stylesheets/global.css";
 
     .underskrift {
       width: 40%;
+    }
+
+    iframe {
+      width: 700px;
+      height: 393.75px;
     }
   }
 </style>
