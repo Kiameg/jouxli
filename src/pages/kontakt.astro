@@ -8,7 +8,7 @@ import "../stylesheets/global.css";
 <script src="../scripts/menu2.js"></script>
 
 <MainLayout withBackground>
-  <h1>KONTAKT</h1>
+  <h1 id="h1">KONTAKT</h1>
   <div id="wrapper">
     <section class="kontakt_section">
       <h3>ÅBNINGSTIDER</h3>
@@ -72,13 +72,13 @@ import "../stylesheets/global.css";
       width: 120%;
       order: 0;
     }
-    h1 {
+    #h1 {
       font-size: var(--h1_desktop);
     }
-    h3 {
+    #wrapper h3 {
       font-size: var(--h3_desktop);
     }
-    p {
+    #wrapper p {
       font-size: var(--p_desktop);
     }
     .portrait {
