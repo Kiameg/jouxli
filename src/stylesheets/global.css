@@ -28,7 +28,6 @@ html {
 
 h1 {
   color: var(--darkbrown);
-  font-size: var(--h1_mobile);
   font-family: "Habibi", serif;
   text-align: center;
   padding-top: 1.5rem;
@@ -38,14 +37,12 @@ h1 {
 
 h3 {
   color: var(--darkbrown);
-  font-size: var(--h3_mobile);
   font-family: "Heebo";
   font-weight: lighter;
 }
 
 h2 {
   color: var(--darkbrown);
-  font-size: var(--h2_mobile);
   font-family: "Habibi", serif;
   font-weight: lighter;
 }
@@ -53,7 +50,6 @@ h2 {
 p {
   font-family: "Heebo", sans-serif;
   color: var(--black);
-  font-size: var(--p_mobile);
 }
 
 body {
