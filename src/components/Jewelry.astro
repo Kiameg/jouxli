@@ -6,8 +6,8 @@ const { link, name, galleryphoto, price } = Astro.props;
 <a href={link}>
     <img src={galleryphoto} alt={name}>
         <div class="hover_text">
-            <h2 id="h2smykker">{name}</h2>
-            <h3 id="h3smykker">{price}</h3>
+            <h3>{name}</h2>
+            <h3>{price}</h3>
             <p id="readmore">Læs mere</p>
         </div>
 </a>
@@ -26,13 +26,9 @@ const { link, name, galleryphoto, price } = Astro.props;
 
     }
 
-    #h2smykker {
-        color: var(--beige);
-        font-size: var(--h2_mobile);
-        font-weight: 100;
-        }
 
-        #h3smykker {
+
+        h3 {
         color: var(--beige);
         font-size: var(--h3_mobile);
         }
@@ -85,13 +81,9 @@ const { link, name, galleryphoto, price } = Astro.props;
         margin-inline: auto;
         }
 
-        #h2smykker {
-        color: var(--beige);
-        font-weight: 100;
-        font-size: var(--h2_desktop);
-        }
 
-        #h2smykker {
+
+        h3 {
         color: var(--beige);
         font-size: var(--h3_desktop);
         }
