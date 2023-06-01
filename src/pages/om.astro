@@ -2,7 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image, Picture } from "@astrojs/image/components";
 import Underskrift from "../assets/icons/underskrift.svg";
-import videoInterview from "../assets/video/jouxli_interview.mp4";
 import backgroundOne from "../assets/icons/smykke1_om_desk.svg";
 import backgroundTwo from "../assets/icons/perler_om.svg";
 import backgroundTwodesk from "../assets/icons/halssmykke-modsat.svg";
@@ -26,9 +25,7 @@ import "../stylesheets/global.css";
       <Image src={backgroundTwodesk} width={null} height={null} alt="background" format={"svg"} class="backgroundTwodesk" />
     </section>
     <section class="vid_section">
-      <video controls>
-        <source src={videoInterview} type="video/mp4" />
-      </video>
+      <iframe width="784" height="441" src="https://www.youtube.com/embed/zY3_CjBMPNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </section>
   </div>
 </MainLayout>
