@@ -7,8 +7,8 @@ import "../stylesheets/global.css";
 
 <script src="../scripts/menu.js"></script>
 <nav>
-  <Image class="logo" src={logoLight} width={null} height={null} alt="logo" format={"svg"} id="logo" />
-  <Image class="logo logo--hide" src={logoDark} width={null} height={null} alt="logo" format={"svg"} id="logo" />
+  <a href="/"><Image class="logo" src={logoLight} width={null} height={null} alt="logo" format={"svg"} id="logo" /></a>
+  <a href="/" class="a_logo"><Image class="logo logo--hide" src={logoDark} width={null} height={null} alt="logo" format={"svg"} id="logo" /></a>
   <button>MENU</button>
 </nav>
 <div class="menu">
@@ -29,9 +29,10 @@ import "../stylesheets/global.css";
     margin-right: 20px;
   }
 
-  .logo {
+  #logo {
     margin-left: 20px;
   }
+
 
   button {
     display: inline;
@@ -50,6 +51,10 @@ import "../stylesheets/global.css";
     height: 2px;
     transition-property: width;
     transition-timing-function: ease-out;
+  }
+
+  .logo_order {
+    order: -1;
   }
 
   button:hover:after,
@@ -173,7 +178,7 @@ import "../stylesheets/global.css";
     }
 
     nav {
-      padding: 0 2px;
+      padding: 0 20px;
     }
 
     ul {

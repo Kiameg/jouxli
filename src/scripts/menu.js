@@ -3,6 +3,7 @@ const menuElement = document.querySelector(".menu");
 const header = document.querySelector("header");
 const logoLight = document.querySelector(".logo");
 const logoDark = document.querySelector(".logo--hide");
+const linkDark = document.querySelector(".a_logo");
 const instaIcon = document.querySelector(".instagram_icon");
 const faceIcon = document.querySelector(".facebook_icon");
 const instaDark = document.querySelector(".instagram_icon--hide");
@@ -31,6 +32,7 @@ function showMenu() {
     instaIcon.style.display = "block";
     faceDark.style.display = "none";
     faceIcon.style.display = "block";
+    linkDark.classList.remove("logo_order");
   } else {
     menuButton.textContent = "LUK";
     isMenuOpen = true;
@@ -45,6 +47,7 @@ function showMenu() {
     instaIcon.style.display = "none";
     faceDark.style.display = "block";
     faceIcon.style.display = "none";
+    linkDark.classList.add("logo_order");
     header.style.backgroundColor = "rgba(242, 229, 213, 0.95)";
   }
   menuElement.classList.toggle("menu_active");
