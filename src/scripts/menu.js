@@ -14,10 +14,11 @@ let isMenuOpen = false;
 
 menuButton.addEventListener("click", showMenu);
 
+//Funktion til at åbne menu
 function showMenu() {
-  //Funktion til at åbne menu
-  if (isMenuOpen) {
-    // Hvis menuen er åben
+  
+  // Hvis menuen er lukket
+  if (isMenuOpen) {  
     menuButton.textContent = "MENU";
     isMenuOpen = false;
     header.style.backgroundColor = "rgba(242, 229, 213, 0)";
@@ -33,6 +34,8 @@ function showMenu() {
     faceDark.style.display = "none";
     faceIcon.style.display = "block";
     linkDark.classList.remove("logo_order");
+
+     // Hvis menuen er åben
   } else {
     menuButton.textContent = "LUK";
     isMenuOpen = true;
